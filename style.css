@@ -3100,6 +3100,7 @@ header .admin {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
+  text-decoration: none;
 }
 
 
@@ -3152,6 +3153,7 @@ header .admin {
 }  
 /* Icon text grid  */
 .page-template-landing-estandar .icon_text_grid{
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3521,7 +3523,78 @@ gap: 20px;
     width: 100%;
   }
 }
-  
+
+/* Item grid with image */
+.page-template-landing-estandar .icon_text_grid_image{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.page-template-landing-estandar .icon_text_grid_image__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  display: flex; 
+  gap: 70px;
+}
+
+.page-template-landing-estandar .icon_grid_image_image__container{
+  width: 100%;
+  max-width: 629px;
+}
+.page-template-landing-estandar .icon_grid_image_content{
+  padding:25px 0px 25px 30px;
+}
+
+.page-template-landing-estandar .icon_grid_image_image {
+  border-bottom-right-radius: 40px;
+}
+
+.page-template-landing-estandar .icon_grid_image_content  .icon_grid-image-text-content{
+  max-width: 620px;
+  padding-right: 20px;
+  margin-bottom: 50px;
+}
+
+.page-template-landing-estandar .icon_grid_image_content .icon_grid_image_title{
+  padding: 0 99px;
+  font-weight: 400 !important;
+  font-size: 38px;
+  line-height: 45px;
+  text-align: center;
+  margin-bottom: 25px !important;
+}
+
+.page-template-landing-estandar .icon_grid_image_content .icon_grid_image_description{
+  font-weight: 300 !important;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.page-template-landing-estandar .icon_grid_image_content .icon_grid_image_items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 296px));
+  grid-column-gap: 20px;
+  grid-row-gap: 35px;
+}
+
+.page-template-landing-estandar .icon_grid_image_content  .icon_grid_image_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-template-landing-estandar .icon_grid_image_content .icon_grid_image_item-icon{
+  margin-bottom: 15px !important;
+}
+
+.page-template-landing-estandar .icon_grid_image_content .icon_grid_image_item_description {
+  font-weight: 500 !important;
+  font-size: 16px;
+  line-height: 21.6px;
+  text-align: center;
+}
 }
 
 

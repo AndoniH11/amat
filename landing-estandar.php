@@ -72,6 +72,56 @@ get_header();
 	</div>
  </div>
 
+ <!-- Icon text grid + image -->
+<div class="icon_text_grid_image">
+	<div class="icon_text_grid_image__wrapper">
+
+		<!-- Image -->
+		<?php if(get_field('icon_grid_image_image')): ?>
+			<div class="icon_grid_image_image__container">
+				<?php $image = get_field("icon_grid_image_image");?>
+				<img class="icon_grid_image_image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt'];?>"/>
+			</div>
+		<?php endif;?>
+
+		<!-- Content -->
+		 <div class="icon_grid_image_content">
+
+			<!-- Text content -->
+			 <div class="icon_grid-image-text-content">
+			 	<?php if(get_field('icon_grid_image_title')):?>
+					<h2 class="icon_grid_image_title"><?php the_field('icon_grid_image_title');?></h2>
+				<?php endif;?>	
+				<?php if(get_field('icon_grid_image_description')):?>
+					<p class="icon_grid_image_description"><?php the_field('icon_grid_image_description');?></p>
+				<?php endif;?>
+			 </div>
+				
+
+			<!-- Items grid -->
+			<?php if(have_rows('icon_grid_image_items')): ?>
+				<div class="icon_grid_image_items">
+					<?php while(have_rows('icon_grid_image_items')): the_row(); ?>
+						<div class="icon_grid_image_item">
+
+							<!-- Icon -->
+							<?php if(get_sub_field('icon')):?>
+								<?php $icon = get_sub_field('icon');?>
+								<img class="icon_grid_image_item-icon" src="<?php echo $icon['url']; ?>" alt="<?php echo $icon['alt']; ?>"/>
+							<?php endif;?>
+
+							<!-- Description -->
+							<p class="icon_grid_image_item_description"><?php the_sub_field('description');?></p>
+						</div>
+					<?php endwhile;?>	
+				</div>
+			<?php endif;?>
+		 </div>
+		
+
+	</div>							
+</div>
+
 <?php if(have_rows('testimonies')) :?> 
 	<!-- Testimonies -->
 	<div class="quotes">
