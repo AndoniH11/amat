@@ -3006,10 +3006,17 @@ header .admin {
 
 
 	/*===============LANDING ESTANDAR & DELUXE ==============*/
+  /* Hero */
+
+  .page-template-landing-estandar .breadcrumbs{
+    display: none;
+  }
+
 .page-template-landing-estandar .hero,
 .page-template-landing-deluxe .hero{
   background-size: cover;
   background-position: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 
@@ -3020,6 +3027,7 @@ header .admin {
 
 .page-template-landing-estandar .hero__wrapper,
 .page-template-landing-deluxe .hero-wrapper {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3028,8 +3036,8 @@ header .admin {
   padding: 165px 60px 177px 60px;
   background: linear-gradient(
     180deg,
-    rgba(54, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.3) 77%
+    rgba(54, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 77%
   );
 }
 
@@ -3066,10 +3074,6 @@ header .admin {
   display: flex;
   overflow: hidden;
   border-radius: 70px !important;
-  -webkit-border-radius: 70px !important;
-  -moz-border-radius: 70px !important;
-  -ms-border-radius: 70px !important;
-  -o-border-radius: 70px !important;
 }
 
 .page-template-landing-estandar .hero .trovimap-input-container,
@@ -3096,6 +3100,116 @@ header .admin {
   color: #ffffff;
   font-size: 16px;
   font-weight: 400;
+  text-decoration: none !important;
+}
+@media(max-width: 767px){
+  .page-template-landing-estandar .hero__wrapper .hero-title,
+  .page-template-landing-deluxe .hero__wrapper .hero-title {
+    font-size: 35px !important;
+    line-height: 1.2;
+  }
+
+
+  .page-template-landing-estandar .hero__wrapper .hero-subtitle,
+  .page-template-landing-deluxe .hero__wrapper .hero-subtitle {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+  }
+}
+
+@media(max-width: 600px){
+  .page-template-landing-estandar .hero__wrapper,
+  .page-template-landing-deluxe .hero-wrapper {
+    padding: 71px 27px 105px 27px;
+  }
+
+  .page-template-landing-estandar .hero__wrapper .hero-logo,
+  .page-template-landing-deluxe .hero__wrapper .hero-logo {
+    width: 135px;
+    height: 53px;
+  }
+
+  .page-template-landing-estandar .hero .trovimap-form,
+  .page-template-landing-deluxe .hero .trovimap-form {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    overflow: auto;
+    border-radius: 0px !important;
+  }
+
+  .page-template-landing-estandar .hero .trovimap-input-container,
+  .page-template-landing-deluxe .hero .trovimap-input-container,
+  .page-template-landing-estandar .hero .trovimap-button-container,
+  .page-template-landing-deluxe .hero .trovimap-button-container{
+    border-radius: 70px !important;
+    overflow: hidden;
+    height: 48px;
+  }
+}  
+/* Icon text grid  */
+.page-template-landing-estandar .icon_text_grid{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-template-landing-estandar .icon_text_grid__wrapper {
+  width: 100%;
+  max-width: 1440px;
+  padding: 80px 60px 100px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-template-landing-estandar .icon_text_grid .icon-grid-title{
+  font-weight: 400 !important;
+  font-size: 38px;
+  line-height: 54px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.page-template-landing-estandar .icon_text_grid .icon-grid-description{
+  max-width: 800px;
+  font-size: 20px;
+  font-weight: 300 !important;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 58px !important;
+}
+
+.page-template-landing-estandar .icon_text_grid .icon-grid-items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.page-template-landing-estandar .icon_text_grid .icon-grid-item{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 20px;
+}
+
+.page-template-landing-estandar .icon_text_grid .icon-grid-item-icon{
+  height: 58px;
+  width: 58px;
+}
+
+.page-template-landing-estandar .icon_text_grid .icon-grid-item-description{
+  max-width: 296px;
+  font-weight: 500 !important;
+  font-size: 16px;
+  line-height: 21.6px;
+  text-align: center;
+  margin: 0;
+}
+
 
 /* Banner */
 
