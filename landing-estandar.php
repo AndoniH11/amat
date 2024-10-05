@@ -121,7 +121,58 @@ get_header();
 
 	</div>							
 </div>
- <!-- FAQs -->
+
+<?php if(have_rows('testimonies')) :?> 
+	<!-- Testimonies -->
+	<div class="quotes">
+		<div class="quotes__wrapper">
+			<!-- Text Content -->
+			<div class="quotes__text-content">
+				<?php if (get_field('testimonies_title')): ?> <h2 class="quotes-text-content__title"><?php the_field('testimonies_title') ?></h2> <?php endif ?>
+			</div>
+
+			<!-- Quotes -->
+			<div class="quotes__slider">
+				<div class="quotes-slider__wrapper">
+					<?php while(have_rows('testimonies')) : the_row(); ?>
+						<!-- Quote -->
+						<div class="quote">
+							<!-- Quote Header -->
+							<div class="quote__header">
+								<?php if(get_sub_field('image')) : ?>
+									<?php $image = get_sub_field('image') ?>
+									<div class="quote__image">
+										<img src="<?php echo $image['url'] ?>" alt="<?php echo $image['alt'] ?>"/>
+									</div>
+								<?php endif ?>
+
+								<div class="quote__info">
+									<p class="quote__name"><?php the_sub_field('name') ?></p>
+									<?php if(get_sub_field('position')) : ?> 
+										<p class="quote__position"><?php the_sub_field('position') ?></p>
+									<?php endif ?>
+								</div>
+							</div>
+
+							<!-- Quote Body -->
+							<div class="quote__body">
+								<p><?php the_sub_field('quote') ?></p>
+							</div>
+					
+						</div>
+					<?php endwhile ?>
+				</div>
+			</div>
+
+			<!-- Pagination -->
+			<div class="quotes__pagination">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(). '/assets/js/quotes-slider.js'?>"></script>
+<?php endif ?>
+
+<!-- FAQs -->
 <div class="faqs">
 	<div class="faqs__wrapper">
 
