@@ -13,16 +13,16 @@ get_header();
 		<!-- Logo -->
 		<?php if(get_field('imagen_logo')): ?>
 			<?php $logo = get_field('imagen_logo'); ?>
-			<img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+			<img class="hero-logo" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
 		<?php endif; ?>
 
 		<!-- Content -->
 		<?php if(get_field('titulo')): ?>
-			<h1><?php the_field('titulo'); ?></h1>
+			<h1 class="hero-title"><?php the_field('titulo'); ?></h1>
 		<?php endif; ?>
 
 		<?php if(get_field('subtitulo')): ?>
-			<p><?php the_field('subtitulo'); ?></p>
+			<p class="hero-subtitle"><?php the_field('subtitulo'); ?></p>
 		<?php endif; ?>
 
 		<!-- Formulario -->
@@ -31,11 +31,13 @@ get_header();
 				document.getElementById("valoracion").href = "https://www.trovimap.com/valora/agente/503470/search?address=" + document.getElementById("label_text").value + "&lang=ca" 
 			}
 		</script>
-		<div id="box">
-			<div> <label id="lbl" for="label_text">Dirección / Referencia catastral</label><br> </div>
-			<div"> <input id="label_text" type="text" name="address" maxlength="200" placeholder="Carrer de Casp, 82 Barcelona" onchange="applyNewAddress()"/> </div>
-			<div> 
-				<a id="valoracion" href="https://www.trovimap.com/valora/agente/503470/search?lang=ca" rel="noopener" target="_blank" >Valorar ahora</a> 
+		<div class='trovimap-form' id="box">
+			<div class="trovimap-input-container"> <input class="trovimap-input" id="label_text" type="text" name="address" maxlength="200" onchange="applyNewAddress()"/> </div>
+			<div class="trovimap-button-container"> 
+				<a class="trovimap-button" id="valoracion" href="https://www.trovimap.com/valora/agente/503470/search?lang=ca" rel="noopener" target="_blank" >
+					<?php the_field('hero_button_text');?>
+					 <!-- valorar ahora -->
+				</a> 
 			</div>
 		</div>
 	</div>
@@ -92,6 +94,7 @@ get_header();
 		</div>
 	</div>
 </div>
+
 <?php
 get_footer();
 ?>

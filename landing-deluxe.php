@@ -1,11 +1,13 @@
 <?php
 /**
- * Template Name: Landing Estandar
+
+ * Template Name: Landing Deluxe
  * Description: Page template with Sidebar on the left side.
  *
  */
 
 get_header();
+
 ?>
 <!-- Hero -->
 <div class="hero" style="background-image: url('<?php the_field('bg_img'); ?>') ;">
