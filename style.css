@@ -3211,6 +3211,107 @@ gap: 20px;
   margin: 0;
 }
 
+/* Testimonios */
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes{
+  padding: 100px 60px 70px 60px;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes__wrapper{
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes-text-content__title{
+  font-size: 38px !important;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 400 !important;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes__slider{
+  overflow: hidden;
+  padding: 30px 20px;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes-slider__wrapper{
+  display: flex;
+  gap: 50px;
+  transition: transform 300ms;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quote{
+  padding: 25px 30px;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.10), 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 25px);
+  flex-shrink: 0;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quote__header{
+  display: flex;
+  gap: 20px;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quote__image img{
+  width: 100%;
+  max-width: 65px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quote__name{
+  font-size: 22px;
+  font-weight: 500 !important;
+  line-height: 1.2;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quote__position{
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 200 !important;
+  line-height: 1.2;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quote__body{
+  margin-top: 30px;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quote__body p{
+  line-height: 1.6;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes__pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  gap: 4px;
+  width: 100%;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes__pagination .dot{
+  width: 14px;
+  height: 9px;
+  border: 1px solid #da291c;
+  background: #da291c;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes__pagination .dot.active{
+  background: transparent;
+}
+
+@media(max-width: 767px){
+  :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .quotes-slider__wrapper .quote{
+    width: 100%;
+  }
+}
+
 /* FAQs */
 :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs{
   padding: 25px 60px 70px 60px;
@@ -3285,9 +3386,19 @@ gap: 20px;
   margin-bottom: 0px;
 }
 
+:is(.page-template-landing-estandar, .page-template-landing-deluxe ) .accordion-flush .accordion-item:last-child{
+  border-bottom: 1px solid black;
+}
+
 @media(max-width: 1020px){
   :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs__wrapper{
     padding: 60px 60px 50px;
+  }
+}
+
+@media(max-width: 767px){
+  :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs__wrapper{
+    padding: 60px 20px 50px;
   }
 }
 
@@ -3296,7 +3407,31 @@ gap: 20px;
     padding: 40px 20px;
   }
   :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs__wrapper{
-    padding: 60px 60px 50px;
+    padding: 30px 0px 85px;
+  }
+
+  :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs__text-content{
+    padding: 20px;
+  }
+
+  :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs-text-content__title{
+    font-size: 32px !important;
+    margin-bottom: 24px;
+    text-wrap: balance;
+  }
+
+  :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs-text-content__subtitle{
+    font-size: 22px;
+  }
+
+  :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs__accordion{
+    margin-top: 16px;
+  }
+
+  :is(.page-template-landing-estandar, .page-template-landing-deluxe ) .faqs__accordion .accordion-body{
+    padding-right: 20px;
+    margin-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
@@ -3365,12 +3500,14 @@ gap: 20px;
   .page-template-landing-estandar .banner-content__title,
   .page-template-landing-deluxe .banner-content__title{
     font-size: 30px;
+    text-wrap: balance;
   }
 
   .page-template-landing-estandar .banner-content__subtitle,
   .page-template-landing-deluxe .banner-content__subtitle{
     font-size: 25px;
     margin-top: 20px;
+    text-wrap: balance;
   }
 
   .page-template-landing-estandar .banner__button a{
