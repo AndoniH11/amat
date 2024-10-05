@@ -72,6 +72,40 @@ get_header();
 	</div>
  </div>
 
+<!-- FAQs -->
+<div class="faqs">
+	<div class="faqs__wrapper">
+
+		<!-- Text Content -->
+		<div class="faqs__text-content">
+			<?php if (get_field('faq_title')): ?> <h2 class="faqs-text-content__title"><?php the_field('faq_title') ?></h2> <?php endif ?>
+			<?php if (get_field('faq_subtitle')): ?> <p class="faqs-text-content__subtitle"><?php the_field('faq_subtitle') ?></p> <?php endif ?>
+		</div>
+		
+		<!-- Faqs -->
+		<?php if(have_rows('faqs')) : ?>
+			<div class="faqs__accordion accordion accordion-flush">
+				<?php while(have_rows('faqs')) : the_row(); ?>
+					<div class="faq accordion-item">
+						<div class="faq__title accordion-header">
+							<h3>											
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse<?php echo get_row_index() ?>" aria-expanded="false" aria-controls="echo flush-collapse<?php get_row_index() ?>">
+									<?php echo get_sub_field('question') ?>
+								</button>
+							</h3>
+						</div>
+						<div id="flush-collapse<?php echo get_row_index() ?>" class="accordion-collapse collapse" aria-labelledby="flush-heading<?php echo get_row_index() ?>" data-bs-parent="#accordionFlushExample">
+							<div class="accordion-body">
+								<?php echo get_sub_field('answer') ?>
+							</div>
+						</div>
+					</div>
+				<?php endwhile ?>
+			</div>
+		<?php endif ?>
+	</div>
+</div>
+
 <!-- Banner -->
 <div class="banner">
 	<div class="banner__wrapper">
