@@ -49,10 +49,10 @@ get_header();
 
 		<!-- Text Content -->
 		<?php if(get_field('icon_grid_title')):?>
-			<h2><?php the_field('icon_grid_title'); ?></h2>
+			<h2 class="icon-grid-title"><?php the_field('icon_grid_title'); ?></h2>
 		<?php endif;?>
 		<?php if(get_field('icon_grid_description')):?>
-			<p><?php the_field('icon_grid_description'); ?></p>
+			<p class="icon-grid-description"><?php the_field('icon_grid_description'); ?></p>
 		<?php endif;?>
 
 		<!-- Grid -->
@@ -62,9 +62,9 @@ get_header();
 					<div class="icon-grid-item">
 						<?php if(get_sub_field('icon')): ?>
 							<?php $icon = get_sub_field('icon');?>
-							<img src="<?php echo $icon['url'];?>" alt="<?php echo $icon['alt'];?>"/>
+							<img class="icon-grid-item-icon" src="<?php echo $icon['url'];?>" alt="<?php echo $icon['alt'];?>"/>
 						<?php endif;?>
-						<p><?php the_sub_field('description'); ?></p>
+						<p class="icon-grid-item-description"><?php the_sub_field('description'); ?></p>
 					</div>
 				<?php endwhile;?>
 			</div>
